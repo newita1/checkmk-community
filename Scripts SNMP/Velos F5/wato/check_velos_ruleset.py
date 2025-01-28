@@ -52,15 +52,6 @@ def _parameter_valuespec_check_velos_advanced():
                     ],
                 )
             ),
-            ("iosummary_thresholds",
-                Tuple(
-                    title = _("Umbrales de alerta para Latencia total de disco"),
-                    elements = [
-                        Integer(title=_("Warning at"), unit=_("seconds")),
-                        Integer(title=_("Critical at"), unit=_("seconds")),
-                    ],
-                )
-            ),
         ],
     )
 
