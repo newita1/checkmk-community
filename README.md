@@ -12,7 +12,7 @@ Welcome to the **Checkmk Library**! This repository is a collection of useful sc
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/checkmk-library.git
+   https://github.com/newita1/checkmk-community.git
    ```
 2. Browse the folders to find scripts, plugins, or documentation.
 3. Follow the provided instructions to integrate the resources into your Checkmk environment.
