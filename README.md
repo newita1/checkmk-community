@@ -40,7 +40,7 @@ This is an open-source project! Feel free to:
 1. Clona el repositorio:
 
    ```sh
-   git clone https://github.com/yourusername/checkmk-community.git
+   git clone https://github.com/newita1/checkmk-community.git
    ```
 2. Explora las carpetas para encontrar scripts, plugins o documentación.
 3. Sigue las instrucciones proporcionadas para integrarlos en tu entorno Checkmk.
