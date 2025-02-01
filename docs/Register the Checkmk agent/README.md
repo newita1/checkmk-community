@@ -24,9 +24,6 @@ To check if the registration was successful, there are two options:
   
   If the registration is successful, it should display a result where the `Target Hash` matches the agent created in Checkmk.
 
-![agent registration](docs/Register the Checkmk agent/img/cap1.png)
-![agent hash from web](docs/Register the Checkmk agent/img/cap2.png)
-
 ---
 
 ## 🖥️ Registration on Windows
@@ -75,9 +72,6 @@ Para comprobar si el registro se realizó correctamente, hay dos opciones:
   ```
   
   Si el registro es exitoso, debería mostrar un resultado donde el `Target Hash` coincida con el del agente creado en Checkmk.
-
-![agent registration](docs/Register the Checkmk agent/img/cap1.png)
-![agent hash from web](docs/Register the Checkmk agent/img/cap2.png)
 
 ---
 
