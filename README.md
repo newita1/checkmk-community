@@ -12,7 +12,7 @@ Welcome to the **Checkmk Library**! This repository is a collection of useful sc
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/checkmk-library.git
+   git clone https://github.com/newita1/checkmk-community.git
    ```
 2. Browse the folders to find scripts, plugins, or documentation.
 3. Follow the provided instructions to integrate the resources into your Checkmk environment.
@@ -40,7 +40,7 @@ This is an open-source project! Feel free to:
 1. Clona el repositorio:
 
    ```sh
-   git clone https://github.com/yourusername/checkmk-library.git
+   git clone https://github.com/yourusername/checkmk-community.git
    ```
 2. Explora las carpetas para encontrar scripts, plugins o documentación.
 3. Sigue las instrucciones proporcionadas para integrarlos en tu entorno Checkmk.
