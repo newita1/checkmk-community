@@ -3,7 +3,7 @@
 # https://docs.checkmk.com/master/en/devel_check_plugins.html#rule_set
 # 
 # Store in your Checkmk site at:
-# local/share/check_mk/web/plugins/wato/check_velos_temp_ruleset.py
+# local/share/check_mk/web/plugins/wato/check_velos_temp_advanced_parameters.py
 
 from cmk.gui.i18n import _
 
@@ -15,15 +15,13 @@ from cmk.gui.valuespec import (
 )
 
 from cmk.gui.plugins.wato.utils import (
-    CheckParameterRulespecWithItem,
+    CheckParameterRulespecWithoutItem,
     rulespec_registry,
     RulespecGroupCheckParametersApplications,
 )
 
 def _parameter_valuespec_check_velos_advanced():
     return Dictionary(
-        title = _("Limits"),
-        help = _("Marca los umbrales de CPU, memoria y temperatura para el servicio de Velos F5."),
         elements = [
             ("cpu_thresholds",
                 Tuple(
@@ -47,8 +45,26 @@ def _parameter_valuespec_check_velos_advanced():
                 Tuple(
                     title = _("Umbrales de alerta para Temperatura"),
                     elements = [
-                        Integer(title=_("Warning at"), unit="°C"),
-                        Integer(title=_("Critical at"), unit="°C"),
+                        Integer(title=_("Warning at"), default_value=30.0, unit="°C"),
+                        Integer(title=_("Critical at"), default_value=35.0, unit="°C"),
+                    ],
+                )
+            ),
+            ("diskwrite_thresholds",
+                Tuple(
+                    title = _("Umbrales de alerta para Latencia de escritura de Disco"),
+                    elements = [
+                        Integer(title=_("Warning at"), default_value=80.0, unit="ms"),
+                        Integer(title=_("Critical at"), default_value=160.0, unit="ms"),
+                    ],
+                )
+            ),
+            ("diskread_thresholds",
+                Tuple(
+                    title = _("Umbrales de alerta para Latencia de lectura de Disco"),
+                    elements = [
+                        Integer(title=_("Warning at"), default_value=80.0, unit="ms"),
+                        Integer(title=_("Critical at"), default_value=160.0, unit="ms"),
                     ],
                 )
             ),
@@ -56,7 +72,7 @@ def _parameter_valuespec_check_velos_advanced():
     )
 
 rulespec_registry.register(
-    CheckParameterRulespecWithItem(
+    CheckParameterRulespecWithoutItem(
         check_group_name = "check_velos_advanced",
         group = RulespecGroupCheckParametersApplications,
         match_type = "dict",
